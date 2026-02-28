@@ -1,0 +1,46 @@
+{
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
+
+  "importOrder": [
+    "^react$",
+    "^react/(.*)$",
+
+    "^next$",
+    "^next/(.*)$",
+
+    "^next/font/(.*)$",
+
+    "<THIRD_PARTY_MODULES>",
+
+    "^server-only$",
+    "^use server$",
+
+    "^@/types/(.*)$",
+    "^@/config/(.*)$",
+    "^@/env$",
+    "^@/constants/(.*)$",
+
+    "^@/lib/(.*)$",
+    "^@/utils/(.*)$",
+
+    "^@/actions/(.*)$",
+
+    "^@/hooks/(.*)$",
+
+    "^@/components/(.*)$",
+    "^@/features/(.*)$",
+
+    "^@/styles/(.*)$",
+    "^@/assets/(.*)$",
+    "^@/fonts/(.*)$",
+
+    "^[./]"
+  ],
+
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderCaseInsensitive": true
+}
