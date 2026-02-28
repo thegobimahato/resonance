@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import { Inter } from "next/font/google";
 
+import { ClerkProvider } from "@clerk/nextjs";
+
 import { Toaster } from "@/components/ui/sonner";
 
 import "./globals.css";
@@ -14,7 +16,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     default: "Resonance",
-    template: "%s | Resonance"
+    template: "%s | Resonance",
   },
   description: "AI-powered text-to-speech and voice cloning platform",
 };
@@ -25,10 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} antialiased`}>
-        {children} <Toaster />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        <body className={`${inter.variable} antialiased`}>
+          {children} <Toaster />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
