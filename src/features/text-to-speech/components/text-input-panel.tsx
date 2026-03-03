@@ -9,8 +9,8 @@ import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
 
 import { COST_PER_UNIT, TEXT_MAX_LENGTH } from "../data/constants";
-import GenereteButton from "./generate-button";
 import { ttsFormOptions } from "./text-to-speech-form";
+import GenerateButton from "./generate-button";
 
 export default function TextInputPanel() {
   const form = useTypedAppFormContext(ttsFormOptions);
@@ -28,7 +28,7 @@ export default function TextInputPanel() {
             <Textarea
               value={field.state.value}
               onChange={(e) => field.handleChange(e.target.value)}
-              placeholder="Start typing or past your text here..."
+              placeholder="Start typing or paste your text here..."
               className="absolute inset-0 resize-none border-0 bg-transparent p-4 pb-6 text-base! leading-relaxed tracking-tight wrap-break-word shadow-none focus-visible:ring-0 lg:p-6"
               maxLength={TEXT_MAX_LENGTH}
               disabled={isSubmitting}
@@ -44,7 +44,7 @@ export default function TextInputPanel() {
       <div className="shrink-0 p-4 lg:p-6">
         {/* Mobile layout */}
         <div className="flex flex-col gap-3 lg:hidden">
-          <GenereteButton
+          <GenerateButton
             className="w-full"
             disabled={isSubmitting}
             isSubmitting={isSubmitting}
@@ -74,7 +74,7 @@ export default function TextInputPanel() {
                 </span>
               </p>
 
-              <GenereteButton
+              <GenerateButton
                 size="sm"
                 disabled={isSubmitting || !isValid}
                 isSubmitting={isSubmitting}

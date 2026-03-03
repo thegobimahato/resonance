@@ -24,11 +24,11 @@ export default function VoicePreviewPlaceholder() {
       </div>
 
       <p className="text-foreground text-lg font-semibold tracking-tight">
-        Preview will apear here
+        Preview will appear here
       </p>
 
       <div className="text-muted-foreground max-w-64 text-center text-sm">
-        Once you generete, your audio result will apear here, sit back and
+        Once you generate, your audio result will appear here, sit back and
         relax.
       </div>
 
