@@ -1,0 +1,43 @@
+import Link from "next/link";
+
+import { AudioLines, BookOpen, Sparkles, Volume2 } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+
+export default function VoicePreviewPlaceholder() {
+  return (
+    <div className="hidden h-full flex-1 flex-col items-center justify-center gap-6 border-t lg:flex">
+      <div className="flex flex-col items-center gap-3">
+        <div className="relative flex w-32 items-center justify-center">
+          <div className="bg-muted absolute left-0 -rotate-30 rounded-full p-4">
+            <Volume2 className="text-muted-foreground size-5" />
+          </div>
+
+          <div className="bg-foreground relative z-10 rounded-full p-4">
+            <Sparkles className="text-background size-5" />
+          </div>
+
+          <div className="bg-muted absolute right-0 -rotate-30 rounded-full p-4">
+            <AudioLines className="text-muted-foreground size-5" />
+          </div>
+        </div>
+      </div>
+
+      <p className="text-foreground text-lg font-semibold tracking-tight">
+        Preview will apear here
+      </p>
+
+      <div className="text-muted-foreground max-w-64 text-center text-sm">
+        Once you generete, your audio result will apear here, sit back and
+        relax.
+      </div>
+
+      <Button variant={"outline"} size={"sm"} asChild>
+        <Link href="mailto:thegobimahato@gmail.com">
+          <BookOpen />
+          Don&apos;t know how ?
+        </Link>
+      </Button>
+    </div>
+  );
+}
