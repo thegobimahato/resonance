@@ -126,7 +126,7 @@ export default function DashboardSidebar() {
       icon: Headphones,
     },
   ];
-  
+
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader className="flex flex-col gap-4 pt-4">

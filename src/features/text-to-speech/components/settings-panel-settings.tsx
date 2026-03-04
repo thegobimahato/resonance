@@ -41,14 +41,14 @@ export default function SettingsPanelSetting() {
                     </span>
                   </div>
 
-                 <Slider
+                  <Slider
                     value={[field.state.value]}
                     onValueChange={(value) => field.handleChange(value[0])}
                     min={slider.min}
                     max={slider.max}
                     step={slider.step}
                     disabled={isSubmitting}
-                    className="**:data-[slot=slider-thumb]:size-3 **:data-[slot=slider-thumb]:bg-foreground **:data-[slot=slider-track]:h-1"
+                    className="**:data-[slot=slider-thumb]:bg-foreground **:data-[slot=slider-thumb]:size-3 **:data-[slot=slider-track]:h-1"
                   />
                 </Field>
               )}

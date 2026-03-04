@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 
 import { ClerkProvider } from "@clerk/nextjs";
 
+import { TRPCReactProvider } from "@/trpc/client";
+
 import { Toaster } from "@/components/ui/sonner";
 
 import "./globals.css";
@@ -28,11 +30,13 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en" suppressHydrationWarning>
-        <body className={`${inter.variable} antialiased`}>
-          {children} <Toaster />
-        </body>
-      </html>
+      <TRPCReactProvider>
+        <html lang="en" suppressHydrationWarning>
+          <body className={`${inter.variable} antialiased`}>
+            {children} <Toaster />
+          </body>
+        </html>
+      </TRPCReactProvider>
     </ClerkProvider>
   );
 }

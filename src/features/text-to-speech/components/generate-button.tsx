@@ -28,7 +28,7 @@ export default function GenerateButton({
           <Spinner className="size-3" /> Generating...
         </>
       ) : (
-        "Generete speech"
+        "Generate speech"
       )}
     </Button>
   );
