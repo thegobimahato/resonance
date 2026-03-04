@@ -1,5 +1,6 @@
-import { quickActions } from "@/features/dashboard/data/quick-actions";
 import { QuickActionCard } from "@/features/dashboard/components/quick-action-card";
+
+import { quickActions } from "@/features/dashboard/data/quick-actions";
 
 export function QuickActionsPanel() {
   return (
@@ -18,4 +19,4 @@ export function QuickActionsPanel() {
       </div>
     </div>
   );
-};
+}

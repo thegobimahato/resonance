@@ -9,8 +9,8 @@ import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
 
 import { COST_PER_UNIT, TEXT_MAX_LENGTH } from "../data/constants";
-import { ttsFormOptions } from "./text-to-speech-form";
 import GenerateButton from "./generate-button";
+import { ttsFormOptions } from "./text-to-speech-form";
 
 export default function TextInputPanel() {
   const form = useTypedAppFormContext(ttsFormOptions);

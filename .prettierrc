@@ -10,7 +10,6 @@
 
     "^next$",
     "^next/(.*)$",
-
     "^next/font/(.*)$",
 
     "<THIRD_PARTY_MODULES>",
@@ -18,19 +17,27 @@
     "^server-only$",
     "^use server$",
 
-    "^@/types/(.*)$",
-    "^@/config/(.*)$",
     "^@/env$",
+    "^@/config/(.*)$",
+    "^@/types/(.*)$",
     "^@/constants/(.*)$",
 
     "^@/lib/(.*)$",
     "^@/utils/(.*)$",
+    "^@/generated/(.*)$",
 
+    "^@/trpc/(.*)$",
     "^@/actions/(.*)$",
 
     "^@/hooks/(.*)$",
 
     "^@/components/(.*)$",
+
+    "^@/features/.*/hooks/(.*)$",
+    "^@/features/.*/components/(.*)$",
+    "^@/features/.*/data/(.*)$",
+    "^@/features/.*/views/(.*)$",
+
     "^@/features/(.*)$",
 
     "^@/styles/(.*)$",
