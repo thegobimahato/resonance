@@ -29,7 +29,7 @@ export const ttsFormOptions = formOptions({
   defaultValues: defaultTTSValues,
 });
 
-export default function TextToSpeechForm({
+export function TextToSpeechForm({
   children,
   defaultValues,
 }: {
